@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<!-- 如果要使用OGNL调用类中的静态属性和方法，需要添加此配置 -->
+	<!--<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>-->
+
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="login" class="com.raycloud.action.UserAction" method="execute" >
+			<result name="reg">/reg.jsp</result>
+            <result name="input">/index.jsp</result>
+		</action>
+		<action name="reg" class="com.raycloud.action.UserAction" method="regExecute" >
+			<result name="success">/success.jsp</result>
+            <result name="input">/input.jsp</result>
+		</action>
+	</package>
+</struts>    
